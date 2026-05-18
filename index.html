@@ -1,423 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lisa — Stunt Performer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600&family=Noto+Serif+JP:wght@200;300;400&family=Barlow:wght@300;400;500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>LISA — STUNT PERFORMER</title>
+<link rel="stylesheet" href="style.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-  <!-- ── NAV ── -->
-  <header class="nav" id="nav">
-    <a href="#home" class="nav__logo">
-      <span class="nav__logo-en">Lisa</span>
-      <span class="nav__logo-rule"></span>
-      <span class="nav__logo-jp">スタントパフォーマー</span>
-    </a>
-    <nav class="nav__links">
-      <a href="#home"    class="nl">Reel</a>
-      <a href="#bio"     class="nl">Bio</a>
-      <a href="#work"    class="nl">Work</a>
-      <a href="#gallery" class="nl">Gallery</a>
-      <a href="#contact" class="nl nl--cta">Contact</a>
-    </nav>
-    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span>
-    </button>
-  </header>
+<!-- ░░ CRT OVERLAY ░░ -->
+<div class="crt-overlay" aria-hidden="true"></div>
+<div class="crt-flicker" aria-hidden="true"></div>
 
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <a href="#home"    class="drawer__a">Reel</a>
-    <a href="#bio"     class="drawer__a">Bio</a>
-    <a href="#work"    class="drawer__a">Work</a>
-    <a href="#gallery" class="drawer__a">Gallery</a>
-    <a href="#contact" class="drawer__a">Contact</a>
+<!-- ░░ HEADER / TITLE SCREEN ░░ -->
+<header class="title-screen" id="home">
+  <div class="title-screen__bg" aria-hidden="true">
+    <div class="dither-grid"></div>
   </div>
 
+  <div class="title-screen__top">
+    <span class="pixel-badge blink">1P</span>
+    <div class="title-screen__lives">
+      <span class="life-icon">♥</span>
+      <span class="life-icon">♥</span>
+      <span class="life-icon">♥</span>
+    </div>
+    <div class="score-block">
+      <div class="score-label">HI-SCORE</div>
+      <div class="score-num">0098760</div>
+    </div>
+  </div>
 
-  <!-- ══════════════════════════════
-       01 · HERO
-  ═══════════════════════════════ -->
-  <section class="hero" id="home">
-
-    <!-- Ink-wash background image, heavily desaturated -->
-    <div class="hero__img-wrap">
-      <img
-        src="https://images.unsplash.com/photo-1509023464722-18d996393ca8?auto=format&fit=crop&w=1920&q=80"
-        alt=""
-        class="hero__img"
-        aria-hidden="true"
-      />
-      <div class="hero__scrim"></div>
+  <div class="title-screen__center">
+    <div class="game-logo">
+      <div class="game-logo__sub">★ PRESENTS ★</div>
+      <h1 class="game-logo__title">
+        <span class="logo-l">S</span><span class="logo-l">T</span><span class="logo-l">U</span><span class="logo-l">N</span><span class="logo-l">T</span>
+      </h1>
+      <div class="game-logo__name">LISA</div>
+      <div class="game-logo__tagline">— WORLD WARRIOR —</div>
     </div>
 
-    <!-- Vertical Japanese rule accent -->
-    <div class="hero__rule"></div>
-
-    <div class="hero__text">
-      <p class="hero__kana">リサ</p>
-      <h1 class="hero__name">LISA</h1>
-      <div class="hero__slash"></div>
-      <p class="hero__sub">Stunt Performer · Martial Artist · Action Actress</p>
+    <div class="title-screen__nav">
+      <a href="#select"  class="menu-item" id="m-select">▶ CHARACTER SELECT</a>
+      <a href="#skills"  class="menu-item">▶ SKILL TREE</a>
+      <a href="#work"    class="menu-item">▶ MISSION LOG</a>
+      <a href="#gallery" class="menu-item">▶ GALLERY</a>
+      <a href="#contact" class="menu-item">▶ CONTACT</a>
     </div>
+  </div>
 
-    <div class="hero__scroll">
-      <div class="hero__scroll-line"></div>
-      <span>scroll</span>
-    </div>
-
-  </section>
-
-
-  <!-- ══════════════════════════════
-       REEL
-  ═══════════════════════════════ -->
-  <section class="reel-sec" id="">
-    <div class="wrap">
-
-      <div class="reel-header">
-        <div class="reel-header__rule"></div>
-        <span class="mark">Showreel 2024</span>
-        <div class="reel-header__rule"></div>
-      </div>
-
-      <div class="reel-frame">
-        <div class="reel-embed">
-          <iframe
-            src="https://www.youtube.com/embed/yjAkWRx33g4"
-            title="Stunt Showreel"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <!-- sword-stroke corner marks -->
-        <span class="kado kado--tl"></span>
-        <span class="kado kado--tr"></span>
-        <span class="kado kado--bl"></span>
-        <span class="kado kado--br"></span>
-      </div>
-
-      <div class="reel-actions">
-        <a href="#bio"     class="btn btn--ink">About</a>
-        <a href="#contact" class="btn btn--red">Contact</a>
-      </div>
-
-    </div>
-  </section>
+  <div class="title-screen__bottom">
+    <div class="insert-coin blink">— INSERT COIN —</div>
+    <div class="copyright">© 2024 LISA STUNT STUDIOS · ALL RIGHTS RESERVED</div>
+  </div>
+</header>
 
 
-  <!-- ══════════════════════════════
-       02 · BIO
-  ═══════════════════════════════ -->
-  <section class="bio" id="bio">
-    <div class="wrap bio__wrap">
+<!-- ░░ CHARACTER SELECT ░░ -->
+<section class="character-select" id="select">
+  <div class="section-banner">
+    <div class="banner-stripe"></div>
+    <h2 class="section-title">CHARACTER SELECT</h2>
+    <div class="banner-stripe"></div>
+  </div>
 
-      <div class="bio__left">
-        <div class="sec-label-v">
-          <span class="sec-num">02</span>
-          <span class="sec-word">Biography</span>
-        </div>
+  <div class="select-layout">
 
-        <div class="portrait-wrap">
+    <!-- Character portrait -->
+    <div class="char-portrait-wrap">
+      <div class="char-portrait">
+        <div class="portrait-frame">
           <img
-            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=600&q=80"
-            alt="Lisa — portrait"
-            class="portrait"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=75"
+            alt="Lisa — Stunt Performer"
+            class="portrait-img"
+            loading="lazy"
           />
-          <!-- ink-wash overlay on portrait -->
-          <div class="portrait-ink"></div>
+          <div class="portrait-scanlines" aria-hidden="true"></div>
         </div>
-
-        <table class="vitals">
-          <tbody>
-            <tr><th>Base</th><td>Porto, Portugal</td></tr>
-            <tr><th>Markets</th><td>PT · ES · BG · AU</td></tr>
-            <tr><th>Status</th><td>Graded Stunt Performer</td></tr>
-            <tr><th>Languages</th><td>EN · PT · ES</td></tr>
-          </tbody>
-        </table>
+        <div class="portrait-name-plate">
+          <span class="blink-slow">▶</span> LISA <span class="blink-slow">◀</span>
+        </div>
+        <div class="portrait-origin">PORTO, PORTUGAL</div>
       </div>
 
-      <div class="bio__right">
-        <h2 class="sec-title">The Story<br /><em>Behind the Work</em></h2>
-        <div class="ink-rule"></div>
-
-        <p class="body-p">Lisa is a Porto-based stunt performer and action actress with credits spanning Portuguese, American, and Australian productions — from national TV commercials to international drama series and reality sports formats. Her on-screen work is grounded in a background in martial arts, precision movement, and years of competitive physical training.</p>
-
-        <p class="body-p">Holding Graded Stunt Performer status under Australian industry standards, Lisa has built her career through elite physical discipline and meticulous preparation. The majority of her credited work has been coordinated through Campground Stunts (Carlos Pereira), and she is actively expanding into the European film markets of Madrid and Sofia.</p>
-
-        <p class="body-p">Her approach to every production is the same: arrive prepared, understand the story being told, and execute with the precision that keeps everyone on set safe and every frame worth watching.</p>
-
-        <div class="disciplines">
-          <span class="disc">Stunt Performance</span>
-          <span class="disc">Fight Choreography</span>
-          <span class="disc">Wire Work</span>
-          <span class="disc">Motion Capture</span>
-          <span class="disc">High Falls</span>
-          <span class="disc">Precision Driving</span>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════
-       03 · WORK HISTORY
-  ═══════════════════════════════ -->
-  <section class="work" id="work">
-    <div class="wrap">
-
-      <div class="work__head">
-        <div class="sec-label-h">
-          <span class="sec-num">03</span>
-          <span class="sec-word">Work History</span>
-        </div>
-        <h2 class="sec-title">Credits &amp;<br /><em>Credentials</em></h2>
-        <div class="ink-rule"></div>
-      </div>
-
-      <div class="work__cols">
-
-        <div class="work__col">
-          <p class="col-head">Selected Credits</p>
-          <div class="credit-list">
-            <div class="cr">
-              <span class="cr__yr">2023–24</span>
-              <div class="cr__body">
-                <p class="cr__role">Drama Series — Stunt Performer</p>
-                <p class="cr__prod">International · Coord: Carlos Pereira / Campground Stunts</p>
-              </div>
-            </div>
-            <div class="cr">
-              <span class="cr__yr">2022</span>
-              <div class="cr__body">
-                <p class="cr__role">TV Commercial — Stunt Performer</p>
-                <p class="cr__prod">Portuguese Production · Coord: Carlos Pereira / Campground Stunts</p>
-              </div>
-            </div>
-            <div class="cr">
-              <span class="cr__yr">2021</span>
-              <div class="cr__body">
-                <p class="cr__role">Reality / Sports Format — Action Performer</p>
-                <p class="cr__prod">Australian Production · Coord: Carlos Pereira / Campground Stunts</p>
-              </div>
-            </div>
-            <div class="cr">
-              <span class="cr__yr">2020</span>
-              <div class="cr__body">
-                <p class="cr__role">TV Commercial — Stunt Double</p>
-                <p class="cr__prod">American Production · Coord: Miguel Frazão</p>
-              </div>
-            </div>
-            <div class="cr">
-              <span class="cr__yr">2019</span>
-              <div class="cr__body">
-                <p class="cr__role">Drama Series — Stunt Performer</p>
-                <p class="cr__prod">Portuguese Production · Coord: Carlos Pereira / Campground Stunts</p>
-              </div>
-            </div>
+      <!-- Health / Status bars -->
+      <div class="status-bars">
+        <div class="status-bar-row">
+          <span class="status-label">POWER</span>
+          <div class="status-track">
+            <div class="status-fill fill--green" style="width:92%"></div>
           </div>
+          <span class="status-val">92</span>
         </div>
-
-        <div class="work__col">
-          <p class="col-head">Certifications</p>
-          <div class="cert-list">
-            <div class="cert">
-              <div class="cert__mark">一</div>
-              <div><p class="cert__t">Graded Stunt Performer</p><p class="cert__s">Australian Industry Standards</p></div>
-            </div>
-            <div class="cert">
-              <div class="cert__mark">二</div>
-              <div><p class="cert__t">First Aid Certified</p><p class="cert__s">[Add certification details]</p></div>
-            </div>
-            <div class="cert">
-              <div class="cert__mark">三</div>
-              <div><p class="cert__t">10+ Years Martial Arts</p><p class="cert__s">Competitive &amp; performance background</p></div>
-            </div>
-            <div class="cert">
-              <div class="cert__mark">四</div>
-              <div><p class="cert__t">Wire Work &amp; Rigging</p><p class="cert__s">Aerial sequences, high falls</p></div>
-            </div>
+        <div class="status-bar-row">
+          <span class="status-label">SPEED</span>
+          <div class="status-track">
+            <div class="status-fill fill--yellow" style="width:88%"></div>
           </div>
-
-          <p class="col-head" style="margin-top:2.8rem;">Downloads</p>
-          <div class="dl-list">
-            <a href="#" class="dl-item">
-              <span class="dl-item__arrow">↓</span>
-              CV / Resume
-            </a>
-            <a href="#" class="dl-item">
-              <span class="dl-item__arrow">↓</span>
-              Headshot
-            </a>
-            <a href="#" class="dl-item">
-              <span class="dl-item__arrow">↓</span>
-              Media Kit
-            </a>
-          </div>
+          <span class="status-val">88</span>
         </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ══════════════════════════════
-       04 · GALLERY
-  ═══════════════════════════════ -->
-  <section class="gallery" id="gallery">
-    <div class="wrap gallery__head">
-      <div class="sec-label-h">
-        <span class="sec-num">04</span>
-        <span class="sec-word">Gallery</span>
-      </div>
-      <h2 class="sec-title">On Set &amp;<br /><em>In Action</em></h2>
-      <div class="ink-rule"></div>
-    </div>
-
-    <div class="gallery__grid">
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Action shot" loading="lazy" />
-        <p class="gi__cap">Drama Series · 2023</p>
-      </div>
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=800&q=80" alt="Training" loading="lazy" />
-        <p class="gi__cap">Training</p>
-      </div>
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1529564879024-c54e7c2dd0e5?auto=format&fit=crop&w=800&q=80" alt="Fight sequence" loading="lazy" />
-        <p class="gi__cap">Fight Sequence</p>
-      </div>
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?auto=format&fit=crop&w=800&q=80" alt="On set" loading="lazy" />
-        <p class="gi__cap">Commercial · 2022</p>
-      </div>
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?auto=format&fit=crop&w=800&q=80" alt="Behind the scenes" loading="lazy" />
-        <p class="gi__cap">Behind the Scenes</p>
-      </div>
-      <div class="gi">
-        <img src="https://images.unsplash.com/photo-1598520106830-8c45c2035460?auto=format&fit=crop&w=800&q=80" alt="Wire work" loading="lazy" />
-        <p class="gi__cap">Wire Work</p>
+        <div class="status-bar-row">
+          <span class="status-label">TECH</span>
+          <div class="status-track">
+            <div class="status-fill fill--cyan" style="width:85%"></div>
+          </div>
+          <span class="status-val">85</span>
+        </div>
+        <div class="status-bar-row">
+          <span class="status-label">XP</span>
+          <div class="status-track">
+            <div class="status-fill fill--magenta" style="width:95%"></div>
+          </div>
+          <span class="status-val">95</span>
+        </div>
       </div>
     </div>
 
-    <p class="gallery__note wrap">Replace placeholder images with your own production stills and action shots.</p>
-  </section>
+    <!-- Bio panel -->
+    <div class="char-bio-panel">
+      <div class="pixel-panel">
+        <div class="pixel-panel__header">FIGHTER DATA FILE</div>
+        <div class="pixel-panel__body">
+          <table class="data-table">
+            <tr><th>CLASS</th><td>STUNT PERFORMER A</td></tr>
+            <tr><th>BASE</th><td>PORTO, PORTUGAL</td></tr>
+            <tr><th>GRADE</th><td>★ CERTIFIED ★</td></tr>
+            <tr><th>MARKETS</th><td>PT · ES · BG · AU</td></tr>
+            <tr><th>COORD</th><td>C.PEREIRA</td></tr>
+            <tr><th>LANG</th><td>EN · PT · ES</td></tr>
+          </table>
 
+          <div class="special-moves">
+            <div class="special-title">SPECIAL MOVES</div>
+            <div class="move-list">
+              <div class="move"><span class="move-cmd">↓ → + P</span><span class="move-name">STUNT PERFORMANCE</span></div>
+              <div class="move"><span class="move-cmd">↓ ← + K</span><span class="move-name">FIGHT CHOREOGRAPHY</span></div>
+              <div class="move"><span class="move-cmd">→ ↓ ↘ + P</span><span class="move-name">WIRE WORK</span></div>
+              <div class="move"><span class="move-cmd">← → + PP</span><span class="move-name">MOTION CAPTURE</span></div>
+              <div class="move"><span class="move-cmd">↑ + K</span><span class="move-name">HIGH FALL</span></div>
+            </div>
+          </div>
 
-  <!-- ══════════════════════════════
-       05 · CONTACT
-  ═══════════════════════════════ -->
-  <section class="contact" id="contact">
-    <div class="wrap contact__wrap">
-
-      <div class="contact__left">
-        <div class="sec-label-h">
-          <span class="sec-num">05</span>
-          <span class="sec-word">Contact</span>
+          <div class="select-bio-text">
+            Porto-based action specialist with 10+ years in competitive martial arts. Credits across PT, AU, and US productions. Available for European market bookings.
+          </div>
         </div>
-        <h2 class="sec-title">Let's Work<br /><em>Together</em></h2>
-        <div class="ink-rule"></div>
+      </div>
+    </div>
 
-        <p class="body-p contact__sub">Open to European productions, bookings, and training collaborations. I respond personally within 48 hours.</p>
+  </div>
+</section>
 
-        <table class="vitals" style="margin-top:1.8rem;">
-          <tbody>
-            <tr><th>Email</th><td><a href="mailto:your@email.com" class="red-link">your@email.com</a></td></tr>
-            <tr><th>Based in</th><td>Porto, Portugal</td></tr>
-            <tr><th>Available</th><td>PT · ES · BG · International</td></tr>
-          </tbody>
-        </table>
 
-        <div class="socials">
-          <a href="#" class="soc">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
-            Instagram
-          </a>
-          <a href="#" class="soc">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 9v6M12 9v6M12 12h3M17 9v6" stroke-linecap="round"/></svg>
-            IMDb
-          </a>
-          <a href="#" class="soc">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M21 7c-.1 2.2-1.6 5.2-4.6 9C13.4 20 10.8 22 8.6 22c-1.3 0-2.5-1.2-3.4-3.6L3.5 13C2.8 10.6 2 9.4 1 9.4" stroke-linecap="round"/><path d="M21 7c.1-1.8-1.1-2.7-3.5-2.7-3 0-6.4 2.8-7.5 4" stroke-linecap="round"/></svg>
-            Vimeo
-          </a>
+<!-- ░░ SKILL TREE ░░ -->
+<section class="skill-section" id="skills">
+  <div class="section-banner">
+    <div class="banner-stripe"></div>
+    <h2 class="section-title">SKILL TREE</h2>
+    <div class="banner-stripe"></div>
+  </div>
+
+  <div class="skill-grid" id="skill-grid">
+    <!-- built by JS -->
+  </div>
+</section>
+
+
+<!-- ░░ MISSION LOG / WORK ░░ -->
+<section class="mission-section" id="work">
+  <div class="section-banner">
+    <div class="banner-stripe"></div>
+    <h2 class="section-title">MISSION LOG</h2>
+    <div class="banner-stripe"></div>
+  </div>
+
+  <div class="mission-grid">
+    <div class="mission-card" onclick="this.classList.toggle('open')">
+      <div class="mission-card__header">
+        <span class="mission-year">2023-24</span>
+        <span class="mission-rank">S RANK</span>
+      </div>
+      <div class="mission-title">DRAMA SERIES</div>
+      <div class="mission-type">▸ STUNT PERFORMER</div>
+      <div class="mission-body">
+        International production. Fight sequences, wire work, doubling for lead actress.
+        <div class="mission-coord">COORD: CARLOS PEREIRA / CAMPGROUND STUNTS</div>
+      </div>
+      <div class="mission-tap blink">▼ TAP</div>
+    </div>
+
+    <div class="mission-card" onclick="this.classList.toggle('open')">
+      <div class="mission-card__header">
+        <span class="mission-year">2022</span>
+        <span class="mission-rank">A RANK</span>
+      </div>
+      <div class="mission-title">TV COMMERCIAL</div>
+      <div class="mission-type">▸ STUNT PERFORMER</div>
+      <div class="mission-body">
+        High-impact action sequence for national Portuguese broadcast campaign.
+        <div class="mission-coord">COORD: CARLOS PEREIRA / CAMPGROUND STUNTS</div>
+      </div>
+      <div class="mission-tap blink">▼ TAP</div>
+    </div>
+
+    <div class="mission-card" onclick="this.classList.toggle('open')">
+      <div class="mission-card__header">
+        <span class="mission-year">2021</span>
+        <span class="mission-rank">A RANK</span>
+      </div>
+      <div class="mission-title">REALITY SPORTS FORMAT</div>
+      <div class="mission-type">▸ ACTION PERFORMER</div>
+      <div class="mission-body">
+        Australian production. Athletic stunt segments across live-format sports show.
+        <div class="mission-coord">COORD: CARLOS PEREIRA / CAMPGROUND STUNTS</div>
+      </div>
+      <div class="mission-tap blink">▼ TAP</div>
+    </div>
+
+    <div class="mission-card" onclick="this.classList.toggle('open')">
+      <div class="mission-card__header">
+        <span class="mission-year">2020</span>
+        <span class="mission-rank">B RANK</span>
+      </div>
+      <div class="mission-title">TV COMMERCIAL</div>
+      <div class="mission-type">▸ STUNT DOUBLE</div>
+      <div class="mission-body">
+        American production. Doubling for lead talent across multiple action setups.
+        <div class="mission-coord">COORD: MIGUEL FRAZÃO</div>
+      </div>
+      <div class="mission-tap blink">▼ TAP</div>
+    </div>
+
+    <div class="mission-card" onclick="this.classList.toggle('open')">
+      <div class="mission-card__header">
+        <span class="mission-year">2019</span>
+        <span class="mission-rank">B RANK</span>
+      </div>
+      <div class="mission-title">DRAMA SERIES</div>
+      <div class="mission-type">▸ STUNT PERFORMER</div>
+      <div class="mission-body">
+        Portuguese production. Fight choreography and wire-assisted sequences.
+        <div class="mission-coord">COORD: CARLOS PEREIRA / CAMPGROUND STUNTS</div>
+      </div>
+      <div class="mission-tap blink">▼ TAP</div>
+    </div>
+
+    <!-- Showreel card -->
+    <div class="mission-card mission-card--reel">
+      <div class="mission-card__header">
+        <span class="mission-year">2024</span>
+        <span class="mission-rank blink">★ REEL</span>
+      </div>
+      <div class="mission-title">SHOWREEL</div>
+      <div class="mission-type">▸ WATCH NOW</div>
+      <div class="reel-embed">
+        <iframe
+          src="https://www.youtube.com/embed/yjAkWRx33g4"
+          title="Stunt Showreel"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ GALLERY ░░ -->
+<section class="gallery-section" id="gallery">
+  <div class="section-banner">
+    <div class="banner-stripe"></div>
+    <h2 class="section-title">GALLERY MODE</h2>
+    <div class="banner-stripe"></div>
+  </div>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=70" alt="Action shot" loading="lazy"/>
+      <div class="gallery-label">DRAMA · 2023</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600&q=70" alt="Training" loading="lazy"/>
+      <div class="gallery-label">TRAINING</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1529564879024-c54e7c2dd0e5?w=600&q=70" alt="Fight sequence" loading="lazy"/>
+      <div class="gallery-label">FIGHT SEQ</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=600&q=70" alt="On set" loading="lazy"/>
+      <div class="gallery-label">COMMERCIAL</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1544717297-fa95b6ee9643?w=600&q=70" alt="BTS" loading="lazy"/>
+      <div class="gallery-label">BTS</div>
+    </div>
+    <div class="gallery-item">
+      <img src="https://images.unsplash.com/photo-1598520106830-8c45c2035460?w=600&q=70" alt="Wire work" loading="lazy"/>
+      <div class="gallery-label">WIRE WORK</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ░░ CONTINUE? CONTACT ░░ -->
+<section class="continue-section" id="contact">
+  <div class="section-banner">
+    <div class="banner-stripe"></div>
+    <h2 class="section-title">CONTINUE?</h2>
+    <div class="banner-stripe"></div>
+  </div>
+
+  <div class="continue-layout">
+
+    <div class="continue-left">
+      <div class="countdown-box">
+        <div class="countdown-label">CONTINUE IN</div>
+        <div class="countdown-num" id="countdown">9</div>
+        <div class="countdown-bar-track">
+          <div class="countdown-bar" id="countdown-bar"></div>
+        </div>
+        <div class="countdown-sub blink">PRESS START TO CONTINUE</div>
+      </div>
+
+      <div class="pixel-panel" style="margin-top:24px">
+        <div class="pixel-panel__header">PLAYER DATA</div>
+        <div class="pixel-panel__body">
+          <div class="contact-info-row"><span class="ci-k">EMAIL</span><a href="mailto:your@email.com" class="ci-v link-blink">your@email.com</a></div>
+          <div class="contact-info-row"><span class="ci-k">BASE</span><span class="ci-v">PORTO, PT</span></div>
+          <div class="contact-info-row"><span class="ci-k">AVAIL</span><span class="ci-v green-text">● ONLINE</span></div>
+          <div class="contact-info-row"><span class="ci-k">MRKTS</span><span class="ci-v">PT·ES·BG·AU</span></div>
         </div>
       </div>
 
-      <form class="form" action="#" method="post" novalidate>
-        <div class="form__row">
-          <div class="field">
-            <label for="f-name" class="field__lbl">Name</label>
-            <input type="text" id="f-name" name="name" class="field__inp" placeholder="Your full name" required />
+      <div class="social-row">
+        <a href="#" class="social-btn">INSTAGRAM</a>
+        <a href="#" class="social-btn">IMDB</a>
+        <a href="#" class="social-btn">VIMEO</a>
+      </div>
+    </div>
+
+    <div class="continue-right">
+      <form class="pixel-form" action="#" method="post" novalidate>
+        <div class="pixel-panel">
+          <div class="pixel-panel__header">ENTER YOUR NAME</div>
+          <div class="pixel-panel__body">
+
+            <div class="form-field">
+              <label class="form-label">▸ NAME</label>
+              <input type="text" name="name" class="pixel-input" placeholder="PLAYER ONE" required/>
+            </div>
+            <div class="form-field">
+              <label class="form-label">▸ EMAIL</label>
+              <input type="email" name="email" class="pixel-input" placeholder="player@email.com" required/>
+            </div>
+            <div class="form-field">
+              <label class="form-label">▸ SUBJECT</label>
+              <select name="subject" class="pixel-input pixel-select">
+                <option value="" disabled selected>SELECT MISSION...</option>
+                <option>PRODUCTION BOOKING</option>
+                <option>STUNT COORDINATION</option>
+                <option>TRAINING COLLAB</option>
+                <option>PRESS / MEDIA</option>
+                <option>OTHER</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label">▸ MESSAGE</label>
+              <textarea name="message" class="pixel-input pixel-textarea" placeholder="ENTER YOUR QUEST..." rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="pixel-btn blink-hover">
+              ★ SEND MESSAGE ★
+            </button>
           </div>
-          <div class="field">
-            <label for="f-co" class="field__lbl">Company / Production</label>
-            <input type="text" id="f-co" name="company" class="field__inp" placeholder="Optional" />
-          </div>
         </div>
-        <div class="field">
-          <label for="f-email" class="field__lbl">Email</label>
-          <input type="email" id="f-email" name="email" class="field__inp" placeholder="your@email.com" required />
-        </div>
-        <div class="field">
-          <label for="f-subj" class="field__lbl">Subject</label>
-          <select id="f-subj" name="subject" class="field__inp field__sel">
-            <option value="" disabled selected>Select a topic…</option>
-            <option>Production Booking</option>
-            <option>Stunt Coordination</option>
-            <option>Training / Collaboration</option>
-            <option>Press / Media</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="field">
-          <label for="f-msg" class="field__lbl">Message</label>
-          <textarea id="f-msg" name="message" class="field__inp field__ta" placeholder="Tell me about your project — dates, location, requirements…" rows="6" required></textarea>
-        </div>
-        <button type="submit" class="btn btn--ink">Send Message</button>
       </form>
-
     </div>
-  </section>
+
+  </div>
+</section>
 
 
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <p class="footer__name">Lisa <span class="footer__jp">リサ</span></p>
-      <p class="footer__copy">© 2024 · Stunt Performer · Porto, Portugal</p>
-      <a href="#home" class="footer__top" aria-label="Back to top">↑</a>
-    </div>
-  </footer>
+<!-- ░░ FOOTER ░░ -->
+<footer class="game-footer">
+  <div class="footer-ticker" id="ticker">
+    LISA · STUNT PERFORMER · PORTO PORTUGAL · GRADED PERFORMER · AVAILABLE FOR BOOKING ·
+    MARKETS: PT ES BG AU · &nbsp;&nbsp;&nbsp;
+    LISA · STUNT PERFORMER · PORTO PORTUGAL · GRADED PERFORMER · AVAILABLE FOR BOOKING ·
+    MARKETS: PT ES BG AU · &nbsp;&nbsp;&nbsp;
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 LISA STUNT STUDIOS</span>
+    <a href="#home" class="back-to-top">▲ BACK TO TOP ▲</a>
+    <span>PRESS START</span>
+  </div>
+</footer>
 
-  <script>
-    // Mobile nav
-    const burger = document.getElementById('burger');
-    const drawer = document.getElementById('drawer');
-    burger.addEventListener('click', () => {
-      const open = drawer.classList.toggle('drawer--open');
-      burger.setAttribute('aria-expanded', String(open));
-      drawer.setAttribute('aria-hidden', String(!open));
-    });
-    drawer.querySelectorAll('.drawer__a').forEach(a =>
-      a.addEventListener('click', () => {
-        drawer.classList.remove('drawer--open');
-        burger.setAttribute('aria-expanded', 'false');
-        drawer.setAttribute('aria-hidden', 'true');
-      })
-    );
-    // Solid nav on scroll
-    window.addEventListener('scroll', () => {
-      document.getElementById('nav').classList.toggle('nav--solid', window.scrollY > 60);
-    }, { passive: true });
-  </script>
-
+<script src="main.js"></script>
 </body>
 </html>
