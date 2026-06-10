@@ -36,10 +36,10 @@
   img{display:block;max-width:100%}
   .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
   .eyebrow{
-    font-family:"Archivo",sans-serif;font-weight:700;font-size:12.5px;letter-spacing:.28em;
+    font-family:"Archivo",sans-serif;font-weight:600;font-size:12.5px;letter-spacing:.28em;
     text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:11px;
   }
-  .eyebrow::before{content:"";width:26px;height:2px;background:var(--gold);display:inline-block}
+  .about-copy .eyebrow,.gal .eyebrow,.contact .eyebrow{display:flex;width:max-content;max-width:100%;margin-bottom:22px}
   .btn{
     display:inline-flex;align-items:center;gap:10px;font-family:"Archivo",sans-serif;font-weight:700;
     font-size:14px;letter-spacing:.04em;padding:14px 26px;border-radius:40px;cursor:pointer;
@@ -54,8 +54,12 @@
   header.nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,backdrop-filter .3s,border-color .3s;border-bottom:1px solid transparent}
   header.nav.scrolled{background:rgba(20,22,27,.82);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
   .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
-  .monogram{font-family:"Archivo",sans-serif;font-weight:900;font-size:21px;letter-spacing:-.04em}
+  .monogram{font-family:"Archivo",sans-serif;font-weight:600;font-size:21px;letter-spacing:-.04em}
   .monogram span{color:var(--gold)}
+  .logo{display:inline-flex;align-items:baseline;gap:11px;font-family:"Archivo",sans-serif;line-height:1}
+  .logo b{font-weight:600;font-size:18px;letter-spacing:-.01em;color:var(--text)}
+  .logo span{font-weight:600;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);position:relative;padding-left:13px}
+  .logo span::before{content:"";position:absolute;left:0;top:50%;width:5px;height:5px;background:var(--gold);border-radius:50%;transform:translateY(-50%)}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a{font-size:14px;font-weight:500;color:var(--muted);transition:color .2s;position:relative}
   .nav-links a:hover{color:var(--text)}
@@ -64,7 +68,7 @@
   .nav-toggle{display:none;background:none;border:0;color:var(--text);cursor:pointer;padding:6px}
 
   /* ---------- HERO ---------- */
-  .hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden}
+  .hero{position:relative;min-height:max(560px,72svh);display:flex;align-items:flex-end;overflow:hidden}
   .hero-bg{position:absolute;inset:0;z-index:0}
   .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:60% 30%;
     animation:slowzoom 18s var(--ease) forwards}
@@ -77,7 +81,7 @@
   }
   .hero-inner{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:0 28px 64px;width:100%}
   .hero .roles{margin-bottom:20px}
-  .hero h1{font-weight:900;font-size:clamp(3.2rem,11vw,8.2rem);text-transform:uppercase}
+  .hero h1{font-weight:600;font-size:clamp(3.2rem,11vw,8.2rem);text-transform:uppercase}
   .hero h1 .ln{display:block;overflow:hidden}
   .hero h1 .ln span{display:block;transform:translateY(108%);animation:rise .9s var(--ease) forwards}
   .hero h1 .ln:nth-child(2) span{animation-delay:.12s}
@@ -85,9 +89,9 @@
   .name-underline{height:4px;width:0;background:var(--gold);margin:18px 0 24px;border-radius:4px;
     animation:draw 1s var(--ease) .7s forwards}
   @keyframes draw{to{width:min(360px,62%)}}
-  .hero .subroles{font-family:"Archivo",sans-serif;font-weight:700;font-size:clamp(1rem,2.4vw,1.45rem);
+  .hero .subroles{font-family:"Archivo",sans-serif;font-weight:500;font-size:clamp(1rem,2.4vw,1.45rem);
     letter-spacing:.02em;color:var(--text);opacity:0;animation:fadein .8s ease .9s forwards}
-  .hero .subroles b{color:var(--gold);font-weight:700}
+  .hero .subroles b{color:var(--gold);font-weight:500}
   @keyframes fadein{to{opacity:1}}
   .socials{display:flex;gap:14px;margin-top:30px;opacity:0;animation:fadein .8s ease 1.05s forwards}
   .social{width:50px;height:50px;display:grid;place-items:center;border:1px solid var(--line);
@@ -119,13 +123,13 @@
   .about-photo .tag{position:absolute;left:-14px;bottom:26px;background:var(--gold);color:#1a1306;
     font-family:"Archivo";font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;
     padding:11px 18px;border-radius:8px;box-shadow:0 14px 30px -12px rgba(0,0,0,.6)}
-  .about h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 22px}
+  .about h2{font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 22px}
   .about p{color:var(--muted);max-width:52ch;margin:0 0 18px}
   .about p b{color:var(--text);font-weight:600}
   .about .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
 
   /* REEL */
-  .reel h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 0}
+  .reel h2{font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 0}
   .reel .head{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:18px;margin-bottom:38px}
   .reel .head p{color:var(--muted);margin:8px 0 0;max-width:44ch}
   .player{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);
@@ -136,7 +140,7 @@
   /* STATS */
   .stats{background:var(--ink-2)}
   .stats-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(36px,6vw,80px);align-items:center}
-  .stats h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 30px}
+  .stats h2{font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 30px}
   .spec{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
   .spec li{display:flex;align-items:center;gap:18px;padding:16px 4px;border-bottom:1px solid var(--line)}
   .spec li .k{font-family:"Archivo";font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;
@@ -151,23 +155,11 @@
     padding:9px 16px;border-radius:8px}
 
   /* GALLERY */
-  .gal h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);margin:16px 0 38px}
-  .grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:212px;gap:16px;grid-auto-flow:dense}
-  .cell{position:relative;overflow:hidden;border-radius:12px;cursor:pointer;background:var(--surface)}
-  .cell img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease);display:block}
-  .cell::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(20,22,27,.55));opacity:0;transition:opacity .3s}
-  .cell .crn{position:absolute;left:14px;bottom:12px;z-index:2;font-family:"Archivo";font-weight:700;font-size:12px;
-    letter-spacing:.1em;text-transform:uppercase;color:#fff;opacity:0;transform:translateY(8px);transition:.3s}
-  .cell:hover img{transform:scale(1.06)}
-  .cell:hover::after{opacity:1}
-  .cell:hover .crn{opacity:1;transform:none}
-  .cell.tall{grid-row:span 2}
-  .c-railing{grid-column:1/3;grid-row:1/3}
-  .c-fb{grid-column:5/7;grid-row:1/3}
-  .c-spar{grid-column:3/5;grid-row:2/4}
-  .c-studio{grid-column:3/5;grid-row:1/2}
-  .c-wall{grid-column:1/3;grid-row:3/4}
-  .c-fly{grid-column:5/7;grid-row:3/4}
+  .grid{column-count:3;column-gap:16px}
+  .cell{position:relative;overflow:hidden;border-radius:12px;cursor:pointer;background:var(--surface);
+    break-inside:avoid;margin:0 0 16px;display:block}
+  .cell img{width:100%;height:auto;display:block;transition:transform .6s var(--ease)}
+  .cell:hover img{transform:scale(1.05)}
 
   /* LIGHTBOX */
   .lb{position:fixed;inset:0;z-index:100;background:rgba(12,13,16,.94);display:none;align-items:center;justify-content:center;padding:32px}
@@ -182,7 +174,7 @@
   /* CONTACT */
   .contact{background:var(--ink-2)}
   .contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,80px)}
-  .contact h2{font-weight:800;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 20px}
+  .contact h2{font-weight:600;font-size:clamp(2rem,4.6vw,3.4rem);margin:18px 0 20px}
   .contact .lead{color:var(--muted);max-width:38ch;margin-bottom:34px}
   .cinfo a{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid var(--line);color:var(--text);transition:color .2s}
   .cinfo a:hover{color:var(--gold)}
@@ -220,8 +212,8 @@
     .about-grid,.stats-grid,.contact-grid{grid-template-columns:1fr}
     .about-photo{max-width:420px}
     .stats-photo{order:-1}
-    .grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:180px}
-    .c-railing,.c-studio,.c-wall,.c-spar,.c-fly,.c-fb{grid-column:auto;grid-row:auto}
+    .grid{column-count:2}
+    .logo span{display:none}
     .scrollcue{display:none}
     .row2{grid-template-columns:1fr}
   }
@@ -238,7 +230,7 @@
 <!-- NAV -->
 <header class="nav" id="nav">
   <div class="nav-inner">
-    <a href="#top" class="monogram">LISA<span>.</span>K</a>
+    <a href="#top" class="logo"><b>Lisa Koivunen</b><span>Stunt Performer</span></a>
     <nav class="nav-links" id="navlinks">
       <a href="#reel">Showreel</a>
       <a href="#about">About</a>
@@ -278,11 +270,9 @@
   <div class="wrap about-grid">
     <div class="about-photo reveal">
       <img src="assets/face.jpg" alt="Portrait of Lisa Koivunen" />
-      <span class="tag">Lisa Koivunen</span>
     </div>
     <div class="about-copy reveal">
       <span class="eyebrow">About</span>
-      <h2>Trained to take the hit — and make it look effortless.</h2>
       <p>Lisa Koivunen is a <b>MEAA-graded stunt performer</b> and lifelong martial artist working across <b>Spain and Portugal</b>, and available worldwide.</p>
       <p>Her work spans <b>fight choreography, falls and high falls, and wire work</b> — built on a foundation of taekwondo, parkour, and relentless physical conditioning. From doubling on television to commercials and rigging, she brings energy, precision and professionalism to every set.</p>
       <div class="cta-row">
@@ -299,13 +289,6 @@
 <!-- REEL -->
 <section class="reel sec-pad" id="reel">
   <div class="wrap">
-    <div class="head reveal">
-      <div>
-        <span class="eyebrow">Showreel</span>
-        <h2>See the work in motion.</h2>
-      </div>
-      <p>A reel of stunt work — fights, falls, parkour and wire — across recent television and commercial projects.</p>
-    </div>
     <div class="player reveal">
       <iframe src="https://www.youtube-nocookie.com/embed/yjAkWRx33g4?rel=0" title="Lisa Koivunen — Stunt Showreel" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
     </div>
@@ -331,7 +314,6 @@
     </div>
     <div class="stats-photo reveal">
       <img src="assets/kick.jpg" alt="Lisa Koivunen performing a side kick" />
-      <span class="tag">In training</span>
     </div>
   </div>
 </section>
@@ -340,14 +322,15 @@
 <section class="gal sec-pad" id="gallery">
   <div class="wrap">
     <span class="eyebrow reveal">Gallery</span>
-    <h2 class="reveal">Stills.</h2>
     <div class="grid reveal" id="grid">
-      <div class="cell c-railing" data-src="assets/g_railing.jpg"><img src="assets/g_railing.jpg" alt="Railing vault" loading="lazy"><span class="crn">Parkour · Vault</span></div>
-      <div class="cell c-studio" data-src="assets/g_studio.jpg"><img src="assets/g_studio.jpg" alt="Studio fighting stance" loading="lazy"><span class="crn">Martial Arts</span></div>
-      <div class="cell c-wall" data-src="assets/g_wall.jpg"><img src="assets/g_wall.jpg" alt="Wall vault" loading="lazy"><span class="crn">Parkour · Wall</span></div>
-      <div class="cell c-spar" data-src="assets/g_spar.jpg"><img src="assets/g_spar.jpg" alt="Taekwondo sparring" loading="lazy"><span class="crn">Taekwondo · Spar</span></div>
-      <div class="cell c-fly" data-src="assets/g_flykick.jpg"><img src="assets/g_flykick.jpg" alt="Flying side kick" loading="lazy"><span class="crn">Flying Kick</span></div>
-      <div class="cell c-fb" data-src="assets/full_body.jpg"><img src="assets/full_body.jpg" alt="Full body" loading="lazy"><span class="crn">Full Body</span></div>
+      <div class="cell" data-src="assets/g_railing.jpg"><img src="assets/g_railing.jpg" alt="Parkour — railing vault" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_studio.jpg"><img src="assets/g_studio.jpg" alt="Martial arts studio portrait" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_lisbon.jpg"><img src="assets/g_lisbon.jpg" alt="On location, Lisbon" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_wall.jpg"><img src="assets/g_wall.jpg" alt="Parkour — wall vault" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_spar.jpg"><img src="assets/g_spar.jpg" alt="Taekwondo sparring" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_bts.jpg"><img src="assets/g_bts.jpg" alt="Behind the scenes on set" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_flykick.jpg"><img src="assets/g_flykick.jpg" alt="Flying side kick" loading="lazy"></div>
+      <div class="cell" data-src="assets/g_vespa.jpg"><img src="assets/g_vespa.jpg" alt="On a Vespa, Lisbon" loading="lazy"></div>
     </div>
   </div>
 </section>
@@ -357,7 +340,6 @@
   <div class="wrap contact-grid">
     <div class="reveal">
       <span class="eyebrow">Contact</span>
-      <h2>Let's work together.</h2>
       <p class="lead">Available for stunt work, doubling, fight choreography and rigging across Spain, Portugal and beyond.</p>
       <div class="cinfo">
         <a href="mailto:lisa.koivunen@gmail.com"><svg viewBox="0 0 24 24"><path d="M2 5h20v14H2zM2 5l10 7L22 5"/></svg><span class="lbl">Email</span>lisa.koivunen@gmail.com</a>
@@ -381,7 +363,7 @@
 <!-- FOOTER -->
 <footer>
   <div class="wrap foot">
-    <a href="#top" class="monogram">LISA<span style="color:var(--gold)">.</span>K</a>
+    <a href="#top" class="monogram">Lisa Koivunen</a>
     <div class="fsoc">
       <a href="https://instagram.com/lisa_sonicboom" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.05 1.8.25 2.2.42.6.22 1 .48 1.4.9.43.43.7.83.9 1.4.18.4.38 1 .43 2.2.06 1.3.07 1.7.07 4.9s0 3.6-.07 4.9c-.05 1.2-.25 1.8-.42 2.2-.22.6-.48 1-.9 1.4-.43.43-.83.7-1.4.9-.4.18-1 .38-2.2.43-1.3.06-1.7.07-4.9.07s-3.6 0-4.9-.07c-1.2-.05-1.8-.25-2.2-.42-.6-.22-1-.48-1.4-.9-.43-.43-.7-.83-.9-1.4-.18-.4-.38-1-.43-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.07-4.9c.05-1.2.25-1.8.42-2.2.22-.6.48-1 .9-1.4.43-.43.83-.7 1.4-.9.4-.18 1-.38 2.2-.43C8.4 2.2 8.8 2.2 12 2.2zM12 7.1a4.9 4.9 0 100 9.8 4.9 4.9 0 000-9.8zm0 8.08a3.18 3.18 0 110-6.36 3.18 3.18 0 010 6.36zm6.24-8.3a1.15 1.15 0 11-2.3 0 1.15 1.15 0 012.3 0z"/></svg></a>
       <a href="https://www.imdb.com/name/nm17635617/" target="_blank" rel="noopener" aria-label="IMDb"><svg viewBox="0 0 24 24"><path d="M3 5h18v14H3zm2.7 3.2v7.6h1.6V8.2zm3 0v7.6h1.5l.8-2.6.8 2.6h1.5V8.2h-1.3v4.4l-.9-3h-.2l-.9 3V8.2zm6.4 0v7.6h2.2c1.3 0 2-.7 2-2.2v-3.2c0-1.5-.7-2.2-2-2.2zm1.5 1.2h.4c.4 0 .6.2.6.8v2.8c0 .6-.2.8-.6.8h-.4z"/></svg></a>
