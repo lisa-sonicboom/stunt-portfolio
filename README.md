@@ -35,4 +35,14 @@ Double-click `index.html` to open it in your browser. (The YouTube reel and Goog
 - **Swap a photo** → drop a new file in `assets/` and update the matching `src="assets/..."`.
 
 ## Contact form
-The form opens the visitor's email app with the message pre-filled to lisa.koivunen@gmail.com — no backend needed. If you'd prefer submissions to arrive automatically in your inbox, a free service like Formspree can be wired in (just ask).
+The form sends submissions straight to **lisa.koivunen@gmail.com** using FormSubmit (no server or signup needed). It works via AJAX, so visitors stay on the page and see a "message sent" confirmation.
+
+**One-time activation (do this once after the site is live):**
+1. Open your live site and send yourself a test message through the form.
+2. FormSubmit emails you a confirmation link the first time — click it to activate.
+3. From then on, every submission lands in your inbox automatically.
+
+Notes:
+- To send to a different address, change both `formsubmit.co/ajax/...` in `index.html` and the `mailto:` links.
+- For extra spam protection you can swap the email in the endpoint for FormSubmit's hashed address (get it from the confirmation email), so your address isn't visible in the page source.
+- Alternatives if you ever prefer: Formspree or Web3Forms (both free, need a quick signup for a form key).
